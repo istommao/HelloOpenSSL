@@ -1,0 +1,129 @@
+# Project information
+site_name: Hello OpenSSL
+site_url: https://www.hello-crypto.com/
+site_author: CodeMax
+site_description: OpenSSL笔记
+# Repository
+repo_name: istommao/HelloOpenSSL
+repo_url: https://github.com/istommao/HelloOpenSSL
+edit_uri: https://github.com/istommao/HelloOpenSSL/tree/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2022 istommao
+
+# Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  language: zh
+  features:
+    # - announce.dismiss
+    - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      # accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      # primary: grey
+      # accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Noto Sans SC
+    code: Fira Code
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/istommao
+    # - icon: fontawesome/brands/twitter 
+    #   link: https://twitter.com/istommao
+    # - icon: fontawesome/solid/code 
+    #   link: https://leetcode.cn/u/jyd/
+  generator: false
+
+# Plugins
+plugins:
+  - search
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+
+# Page tree
+nav:
+  - 写在前面:
+    - 关于: about.md
+  - OpenSSL:
+    - RSA: rsa.md
+    - AES: aes.md
+    - Ed25519: ed25519.md
+    - 证书: cert.md
+  - Digest: digest/digest.md
